@@ -24,7 +24,6 @@ async def on_message(message, timeout=10,):
         await client.send_message(message.channel, "HELLLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
         
     if message.content.lower().startswith('hbmc'):
-        author = ctx.message.author
         msg = discord.Embed(colour=0xc90000, description= "")
         msg.title = ":closed_book: Member Count :closed_book:"
         msg.add_field(name="MEMBERS", value=(len(ctx.message.server.members)), inline=True)
