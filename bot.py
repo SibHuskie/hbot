@@ -83,4 +83,26 @@ async def ship(ctx, userName1: discord.Member = None, userName2: discord.Member 
     print("}ship <user1> <user2>")
     print("{} ### {}".format(author, author.id))
     print("============================================================")
+    
+# }serverinfo
+@client.command(pass_context=True)
+async def serverinfo(ctx):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ":page_with_curl: SERVER INFORMATION"
+    msg.set_footer(text=footer_text)
+    msg.add_field(name="MEMBERS", value=(len(ctx.message.server.members)), inline=True)
+    msg.add_field(name="CHANNELS", value=(len(ctx.message.server.channels)), inline=True)
+    msg.add_field(name="EMOJIS", value=(len(ctx.message.server.emojis)), inline=True)
+    msg.add_field(name="ID", value=(ctx.message.server.id), inline=True)
+    msg.add_field(name="REGION", value=(ctx.message.server.region), inline=True)
+    msg.add_field(name="ROLES", value=(len(ctx.message.server.roles)), inline=True)
+    msg.add_field(name="OWNER", value=(ctx.message.server.owner), inline=True)
+    msg.add_field(name="CREATED AT", value=(ctx.message.server.created_at), inline=True)
+    msg.add_field(name="RELEASE DATE:", value="9th of March 2018", inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}serverinfo")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
 client.run(os.environ['BOT_TOKEN'])
