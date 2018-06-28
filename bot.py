@@ -145,4 +145,202 @@ async def cookie(ctx, userName: discord.Member = None, number: int = None):
     print("}chocolate <user> <number>")
     print("{} ### {}".format(author, author.id))
     print("============================================================")
+    
+# }cry
+@client.command(pass_context=True)
+async def cry(ctx):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    msg.set_image(url="{}".format(random.choice(crylinks)))
+    msg.add_field(name=":tongue: Emotes :tongue:", value="`{} is crying! *Pat pat pat*`".format(author.display_name), inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}cry")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
+    
+crylinks = ["https://media1.giphy.com/media/ROF8OQvDmxytW/giphy-downsized.gif",
+            "https://media1.tenor.com/images/06ae6bbe852471939cf61a81e5a9eb23/tenor.gif?itemid=5370823",
+            "https://78.media.tumblr.com/e9fb46144efc579746e57bcaebd3350a/tumblr_olrmy4djBG1tydz8to1_500.gif",
+            "http://i.imgur.com/k5B1CBd.jpg",
+            "https://media.giphy.com/media/hyU0RHvlS3iQU/giphy.gif",
+            "https://media1.tenor.com/images/5912cbe4bc0dec511b5e0996a2ad9b6f/tenor.gif?itemid=8620704",
+            "https://s9.favim.com/orig/131225/an-anime-anime-gif-anime-guy-Favim.com-1182388.gif",
+            "https://media1.tenor.com/images/06ae6bbe852471939cf61a81e5a9eb23/tenor.gif?itemid=5370823",
+            "https://media.tenor.com/images/d571f86a5adcb4545444e9d1dc4638f9/tenor.gif",
+            "https://i.pinimg.com/originals/73/3d/59/733d5948098702b0d6f156819143b581.gif",
+            "https://67.media.tumblr.com/aa7766807df523677bb9c73da94ee049/tumblr_npwxeb2dPp1u7ltf6o1_500.gif",
+            "https://static2.fjcdn.com/thumbnails/comments/I+actually+dont+remember+i+think+because+of+the+horns+_78025db895d293c2765eaace345742f0.gif"]
+
+# }slap <user>
+@client.command(pass_context=True)
+async def slap(ctx, userName: discord.Member = None):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    if userName == None:
+        msg.add_field(name=":warning: ", value="`h!slap <user>`")
+    else:
+        msg.set_image(url="{}".format(random.choice(slaplinks)))
+        msg.add_field(name=":tongue: Emotes :tongue: ", value="`{}, you got slapped by {}! Ouch...`".format(userName.display_name, author.display_name), inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}slap <user>")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
+    
+slaplinks = ["https://i.imgur.com/EAF42MG.gif",
+             "https://i.imgur.com/tLTT9Q4.gif",
+             "https://i.imgur.com/tEWjg7v.gif",
+             "https://i.imgur.com/MlkLTjv.gif",
+             "https://i.imgur.com/hoTYJZP.gif",
+             "https://i.imgur.com/Pthhs3Y.gif"]
+
+# }hide
+@client.command(pass_context=True)
+async def hide(ctx):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    msg.set_image(url="{}".format(random.choice(hidelinks)))
+    msg.add_field(name=":tongue: Emotes :tongue:", value="`{} is hiding!`".format(author.display_name), inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}cry")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
+
+hidelinks = ["http://www.gifbin.com/bin/012011/1295259460_cat-hides-in-box.gif",
+             "https://www.cat-gifs.com/w3/Funny-Cat-GIF-Weird-Black-Cat-with-big-round-eyes-tries-to-hide-in-his-small-green-box.gif",
+             "http://www.letssmiletoday.com/uploads/images/9642-Quick_hide_in_the_box_20.04.2012.gif",
+             "https://i.gifer.com/VfBm.gif",
+             "https://i.imgur.com/gFMNHyA.gif",
+             "https://i.imgur.com/UXSe4sQ.gif",
+             "https://i.chzbgr.com/full/7074625536/hD0F6F5CE/"]
+
+# <punch <user>
+@client.command(pass_context=True)
+async def punch(ctx, userName: discord.Member = None):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    if userName == None:
+        msg.add_field(name=":warning: ", value="`h!punch <user>`")
+    else:
+        msg.set_image(url="{}".format(random.choice(punchlinks)))
+        msg.add_field(name=":tongue: Emotes :tongue:", value="`{}, you got a punch from by {}! Ouch...`".format(userName.display_name, author.display_name), inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}kiss <user>")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
+    
+punchlinks = ["http://www.reactiongifs.com/wp-content/uploads/2013/11/punch.gif",
+              "https://media.giphy.com/media/7Nsu3HCWLRVgQ/giphy.gif",
+              "https://media1.tenor.com/images/3aa0da04ef714f758c9ed215e629c161/tenor.gif?itemid=4902916",
+              "https://i.pinimg.com/originals/f6/d9/1c/f6d91c1f8a29b0131d448bad244dbeba.gif"]    
+
+# <sorry <user>
+@client.command(pass_context=True)
+async def sorry(ctx, userName: discord.Member = None):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    if userName == None:
+        msg.add_field(name=":warning: ", value="`h!sorry <user>`")
+    else:
+        msg.set_image(url="{}".format(random.choice(sorrylinks)))
+        msg.add_field(name=":tongue: Emotes :tongue:", value="`{}, {} is saying sorry!`".format(userName.display_name, author.display_name), inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}hug <user>")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
+
+sorrylinks = ["https://i.imgur.com/9f2FsAQ.gif",
+            "https://i.imgur.com/9f2FsAQ.gif",
+            "https://i.imgur.com/9f2FsAQ.gif"]
+
+# <spank <user>
+@client.command(pass_context=True)
+async def spank(ctx, userName: discord.Member = None):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    if userName == None:
+        msg.add_field(name=":warning: ", value="`h!spank <user>`")
+    else:
+        msg.set_image(url="{}".format(random.choice(spanklinks)))
+        msg.add_field(name=":tongue: Emotes :tongue:", value="`{} spanked {}!`".format(author.display_name, userName.display_name), inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}spank <user>")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
+
+spanklinks = ["https://i.imgur.com/dt1TTQu.gif",
+              "https://i.imgur.com/ZsTbDvh.gif",
+              "https://i.imgur.com/4LHwG60.gif",
+              "https://i.imgur.com/xLOoHKP.gif",
+              "https://i.imgur.com/UShywVv.gif",
+              "https://i.imgur.com/RE3mnrA.gif"]
+
+# <poke <user>
+@client.command(pass_context=True)
+async def poke(ctx, userName: discord.Member = None):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    if userName == None:
+        msg.add_field(name=":warning: ", value="`h!poke <user>`")
+    else:
+        msg.set_image(url="{}".format(random.choice(pokelinks)))
+        msg.add_field(name=":tongue: Emotes :tongue:", value="`{}, you got poked by {}!`".format(userName.display_name, author.display_name), inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}poke <user>")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
+
+pokelinks = ["https://i.imgur.com/HAAktbl.gif",
+             "https://i.imgur.com/Fmd0Rsu.gif",
+             "https://i.imgur.com/1rObSM3.gif",
+             "https://i.imgur.com/Wo2fc94.gif",
+             "https://i.imgur.com/rtTucBW.gif",
+             "https://i.imgur.com/4c2mC5d.gif",
+             "https://i.imgur.com/1DVD84G.gif"]
+
+# <kiss <user>
+@client.command(pass_context=True)
+async def kiss(ctx, userName: discord.Member = None):
+    author = ctx.message.author
+    msg = discord.Embed(colour=0xcc1625, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    if userName == None:
+        msg.add_field(name=":warning: ", value="`h!kiss <user>`")
+    else:
+        msg.set_image(url="{}".format(random.choice(kisslinks)))
+        msg.add_field(name=":tongue: Emotes :tongue:", value="`{}, you got kissed by {}!`".format(userName.display_name, author.display_name), inline=True)
+    await client.say(embed=msg)
+    print("============================================================")
+    print("}kiss <user>")
+    print("{} ### {}".format(author, author.id))
+    print("============================================================")
+
+kisslinks = ["https://media1.tenor.com/images/9c92434bdeea2df04d67710f338b212d/tenor.gif?itemid=5223535",
+             "https://media1.tenor.com/images/e88bcd916c0da114a8dcac8d9babc77c/tenor.gif?itemid=5052769",
+             "https://m.popkey.co/96c6ee/4QVgR_s-200x150.gif",
+             "https://i.gifer.com/9NC8.gif",
+             "http://gifimage.net/wp-content/uploads/2017/10/morning-kiss-gif-11.gif",
+             "https://thumbs.gfycat.com/LateAchingHoatzin-max-1mb.gif",
+             "https://media1.tenor.com/images/b7cf0d7ff5c2bb274e8cdc6d5a87d91d/tenor.gif?itemid=5636758"]
 client.run(os.environ['BOT_TOKEN'])
