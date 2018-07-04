@@ -343,4 +343,13 @@ kisslinks = ["https://media1.tenor.com/images/9c92434bdeea2df04d67710f338b212d/t
              "http://gifimage.net/wp-content/uploads/2017/10/morning-kiss-gif-11.gif",
              "https://thumbs.gfycat.com/LateAchingHoatzin-max-1mb.gif",
              "https://media1.tenor.com/images/b7cf0d7ff5c2bb274e8cdc6d5a87d91d/tenor.gif?itemid=5636758"]
+
+# }invite
+@client.command(pass_context=True)
+async def invite(ctx):
+    msg = discord.Embed(colour=0xcc1625, url=default_invite, description= "")
+    msg.title = ""
+    msg.set_footer(text=footer_text)
+    msg.add_field(name=":link: ", value="Here is the default server invite:\n{}".format(default_invite))
+    await client.say(embed=msg)
 client.run(os.environ['BOT_TOKEN'])
